@@ -4,92 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Lost Cheetah</title>
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap
+https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap
 <style>
-:root{
-    --gold:#d4ad52;
-    --brown:#8b6348;
-    --charcoal:#2d2926;
-    --ivory:#ece7df;
-    --blue:#8faee8;
-    --radius:18px;
-    --shadow:0 8px 20px rgba(0,0,0,.1);
-}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 body{
+    background:#ece6dd;
     font-family:'Poppins',sans-serif;
-    background:#ebe7e0;
     color:#333;
-    padding:40px;
+    padding:30px;
 }
 .container{
     max-width:1400px;
     margin:auto;
 }
-h1{
-    font-family:'Playfair Display',serif;
-    font-size:4rem;
-    color:#2a2624;
-}
-.subtitle{
-    margin:10px 0 20px;
-    font-style:italic;
-    font-size:1.2rem;
-}
-.top{
+.hero{
     display:grid;
-    grid-template-columns:1fr 1.3fr 320px;
+    grid-template-columns:1fr 1fr 320px;
     gap:30px;
     align-items:start;
 }
-.feature-image{
-    margin-top:25px;
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    margin-bottom:10px;
+}
+.subtitle{
+    font-style:italic;
+    margin-bottom:20px;
+}
+.description{
+    max-width:450px;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+.hero-image{
     width:100%;
-    border-radius:20px;
+    height:220px;
+    border-radius:18px;
     overflow:hidden;
 }
-.feature-image img{
+.hero-image img{
     width:100%;
-    height:260px;
+    height:100%;
     object-fit:cover;
 }
-.hero-card,
-.card,
-.small-card,
-.final-card{
+.card{
     background:white;
-    border-radius:20px;
+    border:1px solid #b8b8b8;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:var(--shadow);
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
-.hero-card img,
+.card-header{
+    padding:10px 14px;
+    background:#f8f8f8;
+    border-bottom:1px solid #ddd;
+}
+.badge{
+    background:#403633;
+    color:white;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:600;
+}
 .card img{
     width:100%;
-    height:200px;
+    height:180px;
     object-fit:cover;
 }
-.hero-content,
-.card-content{
-    padding:25px;
+.card-body{
+    padding:22px;
     text-align:center;
 }
-.hero-content h2,
-.card-content h2{
+.card-body h3{
     font-family:'Playfair Display',serif;
     margin-bottom:10px;
 }
-.btn-group{
+.card-body p{
+    color:#666;
+    font-size:14px;
+    line-height:1.6;
+}
+.actions{
     display:flex;
     gap:10px;
-    margin-top:20px;
+    margin-top:15px;
 }
-button{
+.btn{
     flex:1;
     border:none;
     border-radius:10px;
@@ -97,217 +103,243 @@ button{
     font-weight:600;
     cursor:pointer;
 }
-.gold{background:var(--gold);}
-.brown{background:var(--brown);color:white;}
-.blue{background:var(--blue);}
-.green{background:#658066;color:white;}
-.purple{background:#544b61;color:white;}
-.style-panel{
-    padding:24px;
-    background:#f1ede8;
-    border-radius:24px;
+.gold{
+    background:#d7ad4e;
+    color:white;
+}
+.brown{
+    background:#967053;
+    color:white;
+}
+.blue{
+    background:#8eaee5;
+    color:white;
+}
+.outline{
+    background:white;
+    border:1px solid #999;
+}
+.design-panel{
+    background:#f4efe7;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid #ddd;
+}
+.design-panel h4{
+    margin-bottom:15px;
 }
 .colors{
     display:flex;
     gap:12px;
-    margin:15px 0 25px;
+    margin-bottom:25px;
 }
-.color{
-    width:26px;
-    height:26px;
+.colors span{
+    width:28px;
+    height:28px;
     border-radius:50%;
+    display:block;
 }
 .paths{
+    margin-top:35px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:40px;
-}
-.events{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
     gap:20px;
-    margin-top:40px;
+}
+.endings{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
 }
 .small-card img{
-    width:100%;
-    height:120px;
-    object-fit:cover;
+    height:110px;
 }
-.small-card-content{
+.small-card .card-body{
     padding:16px;
-    text-align:center;
 }
-.small-card-content h4{
-    font-family:'Playfair Display',serif;
-}
-.final-card{
-    max-width:700px;
-    margin:60px auto;
-}
-.final-card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-}
-.final-content{
-    padding:25px;
-    text-align:center;
-}
-.end-btn{
-    width:100%;
-    background:var(--charcoal);
-    color:white;
-    margin-top:20px;
+.quote-section{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:1fr 1.5fr 1fr;
+    gap:30px;
+    align-items:center;
 }
 .quote{
-    margin:50px auto;
-    text-align:center;
     font-family:'Playfair Display',serif;
-    font-size:2rem;
-    max-width:700px;
+    font-size:42px;
+    font-style:italic;
+    text-align:center;
 }
-@media (max-width:1200px){
-    .top{
-        grid-template-columns:1fr;
-    }
-    .paths{
-        grid-template-columns:1fr;
-    }
-    .events{
-        grid-template-columns:repeat(2,1fr);
-    }
+.ending-card img{
+    height:160px;
+}
+.footer-text{
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+    text-align:center;
+}
+@media(max-width:1100px){
+.hero{
+    grid-template-columns:1fr;
+}
+.paths{
+    grid-template-columns:1fr;
+}
+.endings{
+    grid-template-columns:1fr 1fr;
+}
+.quote-section{
+    grid-template-columns:1fr;
+}
 }
 </style>
 </head>
 <body>
 <div class="container">
-<div class="top">
+<div class="hero">
 <div>
 <h1>The Lost Cheetah</h1>
-<p class="subtitle">
-A Choose-Your-Own-Adventure Story
-</p>
-<p>
+<p class="subtitle">A Choose-Your-Own-Adventure Story</p>
+<p class="description">
 Guide Kito, a young cheetah, through the savanna.
 Make choices, explore different paths, and discover multiple endings.
 </p>
-<div class="feature-image">
-https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80
+<div class="hero-image">
+images/sunset-cheetah.jpg
 </div>
 </div>
-<div class="hero-card">
-https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80
-<div class="hero-content">
-<h2>The Lost Cheetah</h2>
+<div class="card">
+<div class="card-header">
+<span class="badge">HOME (START)</span>
+</div>
+images/hero-cheetah.jpg
+<div class="card-body">
+<h3>The Lost Cheetah</h3>
 <p>
 A powerful storm has swept across the savanna.
-Kito wakes alone. Which direction will you choose?
+Which direction will you choose?
 </p>
-<div class="btn-group">
-<button class="gold">Follow Footprints</button>
-<button class="brown">Search For Food</button>
+<div class="actions">
+<button class="btn gold">Follow Footprints</button>
+<button class="btn brown">Search For Food</button>
 </div>
 </div>
 </div>
-<div class="style-panel">
-<h3>Design Style</h3>
+<div class="design-panel">
+<h4>Design Style</h4>
 <div class="colors">
-<div class="color" style="background:#d4ad52"></div>
-<div class="color" style="background:#8b6348"></div>
-<div class="color" style="background:#2d2926"></div>
-<div class="color" style="background:#ece7df;border:1px solid #ccc"></div>
-<div class="color" style="background:#8faee8"></div>
+<span style="background:#D5A949"></span>
+<span style="background:#8A6244"></span>
+<span style="background:#2F2A28"></span>
+<span style="background:#F3EFE8;border:1px solid #ccc"></span>
+<span style="background:#87A8E6"></span>
 </div>
-<h3>Typography</h3>
-<p>Headings: Playfair Display</p>
+<h4>Typography</h4>
+<p>Heading: Playfair Display</p>
 <p>Body: Poppins</p>
 </div>
 </div>
-<section class="paths">
+<div class="paths">
 <div class="card">
-https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80
-<div class="card-content">
-<h2>Follow The Footprints</h2>
-<p>Fresh tracks lead further into the grasslands.</p>
-<div class="btn-group">
-<button class="gold">Keep Following</button>
-</div>
-</div>
-</div>
-<div class="card">
-https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80
-<div class="card-content">
-<h2>Search For Food</h2>
-<p>A herd of gazelles grazes nearby.</p>
-<div class="btn-group">
-<button class="brown">Stalk The Gazelle</button>
+images/footprints.jpg
+<div class="card-body">
+<h3>Follow the Footprints</h3>
+<p>You find fresh tracks in the mud.</p>
+<div class="actions">
+<button class="btn gold">Keep Following</button>
+<button class="btn outline">Investigate Noise</button>
 </div>
 </div>
 </div>
 <div class="card">
-https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80
-<div class="card-content">
-<h2>Follow The River</h2>
-<p>The river promises relief but danger hides beneath.</p>
-<div class="btn-group">
-<button class="blue">Drink Water</button>
+images/hunting.jpg
+<div class="card-body">
+<h3>Search for Food</h3>
+<p>A herd of gazelles graze nearby.</p>
+<div class="actions">
+<button class="btn brown">Stalk the Gazelle</button>
+<button class="btn outline">Rest Instead</button>
 </div>
 </div>
 </div>
-</section>
-<section class="events">
-<div class="small-card">
-https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>A Hyena Appears</h4>
+<div class="card">
+images/river.jpg
+<div class="card-body">
+<h3>Follow the River</h3>
+<p>The river promises relief.</p>
+<div class="actions">
+<button class="btn blue">Drink the Water</button>
+<button class="btn outline">Follow the Bank</button>
 </div>
 </div>
-<div class="small-card">
-https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>Family Reunion</h4>
 </div>
 </div>
-<div class="small-card">
-https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>A Successful Hunt</h4>
+<div class="endings">
+<div class="card small-card">
+images/hyena.jpg
+<div class="card-body">
+<h3>A Hyena Appears</h3>
+<button class="btn" style="background:#564965;color:white">
+Run Away
+</button>
 </div>
 </div>
-<div class="small-card">
-https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>Time To Rest</h4>
+<div class="card small-card">
+images/family.jpg
+<div class="card-body">
+<h3>Family Reunion</h3>
+<button class="btn gold">We Won!</button>
 </div>
 </div>
-<div class="small-card">
-https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>Danger In Water</h4>
+<div class="card small-card">
+images/hunt-success.jpg
+<div class="card-body">
+<h3>A Successful Hunt</h3>
+<button class="btn" style="background:#5E8164;color:white">
+Continue Journey
+</button>
 </div>
 </div>
-<div class="small-card">
-https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80
-<div class="small-card-content">
-<h4>A Peaceful Oasis</h4>
+<div class="card small-card">
+images/rest.jpg
+<div class="card-body">
+<h3>Time to Rest</h3>
+<button class="btn brown">Continue Journey</button>
 </div>
 </div>
-</section>
+<div class="card small-card">
+images/crocodile.jpg
+<div class="card-body">
+<h3>Danger in the Water</h3>
+<button class="btn" style="background:#564965;color:white">
+Try Again
+</button>
+</div>
+</div>
+</div>
+<div class="quote-section">
 <div class="quote">
-“Different paths. Different experiences. A stronger you.”
+“Different paths.<br>
+Different experiences.<br>
+A stronger you.”
 </div>
-<div class="final-card">
-https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80
-<div class="final-content">
-<h2>A Brighter Tomorrow</h2>
+<div class="card ending-card">
+images/final-sunset.jpg
+<div class="card-body">
+<h3>A Brighter Tomorrow</h3>
 <p>
-No matter which path you choose, Kito grows stronger.
-The savanna is full of challenges, but you are ready.
+No matter which path you choose,
+the savanna is full of challenges,
+but you are ready.
 </p>
-<button class="end-btn">
+<button class="btn" style="background:#252220;color:white">
 The End
 </button>
+</div>
+</div>
+<div class="footer-text">
+Still wild.<br>
+Still running.
 </div>
 </div>
 </div>
